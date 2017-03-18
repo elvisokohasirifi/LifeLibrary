@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryproject.LoanBooksController">
+   <children>
+      <Text layoutX="228.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOAN BOOKS" wrappingWidth="120.13671875" />
+      <Text layoutX="89.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrower's Name" wrappingWidth="94.13671845197678" />
+      <Text layoutX="89.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrower Id" wrappingWidth="94.1367119550705" />
+      <Text layoutX="98.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book" />
+      <Text layoutX="94.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="90.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" />
+      <Button fx:id="loanBtn" layoutX="210.0" layoutY="324.0" mnemonicParsing="false" onAction="#loanBook" text="Loan" />
+      <Button fx:id="backBtn" layoutX="386.0" layoutY="324.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <TextField fx:id="borrowerName" layoutX="205.0" layoutY="89.0" prefHeight="25.0" prefWidth="257.0" />
+      <TextField fx:id="emailTxt" layoutX="205.0" layoutY="220.0" prefHeight="25.0" prefWidth="257.0" />
+      <TextField fx:id="contactTxt" layoutX="205.0" layoutY="266.0" prefHeight="25.0" prefWidth="257.0" />
+      <TextField fx:id="borrowerId" layoutX="205.0" layoutY="131.0" prefHeight="25.0" prefWidth="257.0" />
+      <ComboBox fx:id="bookBox" layoutX="206.0" layoutY="175.0" prefHeight="25.0" prefWidth="257.0" />
+      <Hyperlink fx:id="logoutLink" layoutX="510.0" layoutY="345.0" onAction="#logOut" text="Log Out" />
+      <MenuBar layoutX="7.0" layoutY="14.0" prefHeight="25.0" prefWidth="593.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Account">
+            <items>
+              <MenuItem fx:id="acountLnk" mnemonicParsing="false" onAction="#goToAccount" text="Personal Profile" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Add">
+              <items>
+                <MenuItem fx:id="addLnk" mnemonicParsing="false" onAction="#addBook" text="Book" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Delete">
+            <items>
+              <MenuItem fx:id="deleteLnk" mnemonicParsing="false" onAction="#deleteBook" text="Delete Book" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="editBookLink" mnemonicParsing="false" onAction="#editBook" text="Book" />
+                  <MenuItem fx:id="editBorrowerLink" mnemonicParsing="false" onAction="#editBorrower" text="Borrower" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Search">
+               <items>
+                  <MenuItem fx:id="searchBookLink" mnemonicParsing="false" onAction="#searchBook" text="Book" />
+                  <MenuItem fx:id="searchBorowerLink" mnemonicParsing="false" onAction="#searchBorrower" text="Borrower" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="helpLink" mnemonicParsing="false" onAction="#helpUser" text="helpUser" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
